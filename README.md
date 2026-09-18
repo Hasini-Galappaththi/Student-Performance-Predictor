@@ -101,7 +101,7 @@ A real student performance prediction system would require a larger, representat
 
 ## Data Visualizations
 
-The project includes several visualizations:
+The project includes several visualizations.
 
 ### Feature Correlation
 
@@ -114,6 +114,26 @@ A bar chart showing the number of students classified as Pass and Fail.
 ### Study Hours vs Previous Marks
 
 A scatter plot showing the relationship between study hours and previous marks.
+
+## Application Screenshots
+
+The project includes screenshots demonstrating the Flask web application, student performance predictions, model information, and data visualizations.
+
+### Web Application
+
+The Flask web interface allows users to enter student information and receive a predicted PASS/FAIL result along with the probability of passing.
+
+### Prediction Results
+
+The application displays the predicted performance, probability of passing, and a summary of the entered student information.
+
+### Model Information
+
+The application provides information about the machine learning algorithm, dataset, test set, and evaluation metrics.
+
+### Visual Results
+
+The application displays visualizations that help explore relationships and patterns within the dataset.
 
 ## Project Structure
 
@@ -129,6 +149,15 @@ Student-Performance-Predictor/
 │   └── student_performance_model.pkl
 │
 ├── notebooks/
+│
+├── screenshots/
+│   ├── application-home.png
+│   ├── prediction-pass.png
+│   ├── prediction-fail.png
+│   ├── model-information.png
+│   ├── correlation-heatmap.png
+│   ├── pass-fail-distribution.png
+│   └── study-hours-vs-marks.png
 │
 ├── src/
 │   ├── explore_data.py
@@ -153,25 +182,25 @@ Student-Performance-Predictor/
 
 ## How to Run the Project
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Hasini-Galappaththi/Student-Performance-Predictor.git
 ```
 
-### 2. Open the project folder
+### 2. Open the Project Folder
 
 ```bash
 cd Student-Performance-Predictor
 ```
 
-### 3. Create a virtual environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 4. Activate the virtual environment
+### 4. Activate the Virtual Environment
 
 **Windows PowerShell:**
 
@@ -185,21 +214,21 @@ venv\Scripts\Activate.ps1
 source venv/Scripts/activate
 ```
 
-### 5. Install the required packages
+### 5. Install the Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Run the Flask application
+### 6. Run the Flask Application
 
 ```bash
 python app.py
 ```
 
-### 7. Open the application
+### 7. Open the Application
 
-Open this address in your web browser:
+Open the following address in your web browser:
 
 ```text
 http://127.0.0.1:5000
@@ -217,7 +246,7 @@ Assignment Score: 75
 Sleep Hours: 7
 ```
 
-The Flask application then sends these values to the trained machine learning model and displays the predicted result.
+The Flask application then sends these values to the trained machine learning model and displays the predicted result and probability of passing.
 
 ## Limitations
 
@@ -251,3 +280,4 @@ Possible future improvements include:
 **Hasini Thirandi Galappaththi**
 
 Computer Science Undergraduate
+
