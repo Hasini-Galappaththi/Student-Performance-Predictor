@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Predictor</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="header">
+            <h1>Student Performance Predictor</h1>
+            <p>Enter student information to predict academic performance.</p>
+        </div>
+
+
+        <!-- Prediction Form -->
+        <div class="card">
+            <div class="info-box">
+    <h3>What does this predictor use?</h3>
+    <p>
+        The model analyzes study hours, attendance, previous marks,
+        assignment score, and sleep hours to predict student performance.
+    </p>
+</div>
+
+            <form method="POST">
+
+                <div class="form-group">
+                    <label for="study_hours">Study Hours</label>
+                    <input
+                        type="number"
+                        id="study_hours"
+                        name="study_hours"
+                        step="0.1"
+                        min="0"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="attendance">Attendance (%)</label>
+                    <input
+                        type="number"
+                        id="attendance"
+                        name="attendance"
+                        step="0.1"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="previous_marks">Previous Marks</label>
+                    <input
+                        type="number"
+                        id="previous_marks"
+                        name="previous_marks"
+                        step="0.1"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="assignment_score">Assignment Score</label>
+                    <input
+                        type="number"
+                        id="assignment_score"
+                        name="assignment_score"
+                        step="0.1"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="sleep_hours">Sleep Hours</label>
+                    <input
+                        type="number"
+                        id="sleep_hours"
+                        name="sleep_hours"
+                        step="0.1"
+                        min="0"
+                        max="24"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit">
+                    Predict Performance
+                </button>
+
+            </form>
+
+
+       <!-- Prediction Result -->
+{% if prediction %}
+
+<div class="result {% if prediction == 'PASS' %}pass-result{% else %}fail-result{% endif %}">
+
+    <h2>Prediction Result</h2>
+
+    <div class="prediction-status">
+        {{ prediction }}
+    </div>
+
+    {% if prediction == 'PASS' %}
+        <p class="result-message">
+            The model predicts that this student is likely to pass.
+        </p>
+    {% else %}
+        <p class="result-message">
+            The model predicts that this student is likely to fail.
+        </p>
+    {% endif %}
+
+    <p class="probability-text">
+        Probability of passing:
+        <strong>
+            {{ "%.2f"|format(probability) }}%
+        </strong>
+    </p>
+
+    <div class="probability-bar">
+        <div
+            class="probability-fill"
+            style="width: {{ probability }}%;">
+        </div>
+    </div>
+    <div class="input-summary">
+
+    <h3>Student Information</h3>
+
+    <div class="summary-grid">
+
+        <div class="summary-item">
+            <span>Study Hours</span>
+            <strong>{{ request.form["study_hours"] }}</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Attendance</span>
+            <strong>{{ request.form["attendance"] }}%</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Previous Marks</span>
+            <strong>{{ request.form["previous_marks"] }}</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Assignment Score</span>
+            <strong>{{ request.form["assignment_score"] }}</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Sleep Hours</span>
+            <strong>{{ request.form["sleep_hours"] }}</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+{% endif %}
+
+        </div>
+
+
+        <!-- Model Information -->
+        <div class="model-info">
+
+            <h3>Model Information</h3>
+
+            <div class="model-grid">
+
+                <div class="model-item">
+                    <span>Algorithm</span>
+                    <strong>Logistic Regression</strong>
+                </div>
+
+                <div class="model-item">
+                    <span>Dataset</span>
+                    <strong>500 Synthetic Records</strong>
+                </div>
+
+                <div class="model-item">
+                    <span>Test Set</span>
+                    <strong>100 Records</strong>
+                </div>
+
+                <div class="model-item">
+                    <span>Accuracy</span>
+                    <strong>98%</strong>
+                </div>
+
+                <div class="model-item">
+                    <span>Precision</span>
+                    <strong>100%</strong>
+                </div>
+
+                <div class="model-item">
+                    <span>Recall</span>
+                    <strong>95.74%</strong>
+                </div>
+
+                <div class="model-item">
+                    <span>F1-Score</span>
+                    <strong>97.83%</strong>
+                </div>
+
+            </div>
+
+            <p class="model-note">
+                Metrics are based on the synthetic dataset used for this project
+                and should not be interpreted as real-world predictive performance.
+            </p>
+
+        </div>
+        <!-- Data Visualization -->
+<div class="visualization-section">
+
+    <h3>Feature Correlation</h3>
+
+    <p>
+        This heatmap shows the correlation between the variables
+        used in the student performance dataset.
+    </p>
+
+    <img
+        src="{{ url_for('static', filename='correlation_heatmap.png') }}"
+        alt="Correlation Heatmap"
+    >
+
+</div>
+<!-- Pass vs Fail Distribution -->
+<div class="visualization-section">
+
+    <h3>Pass vs Fail Distribution</h3>
+
+    <p>
+        This chart shows the number of students who passed
+        and failed in the dataset.
+    </p>
+
+    <img
+        src="{{ url_for('static', filename='pass_fail_distribution.png') }}"
+        alt="Pass vs Fail Distribution"
+    >
+
+</div>
+<!-- Study Hours vs Previous Marks -->
+<div class="visualization-section">
+
+    <h3>Study Hours vs Previous Marks</h3>
+
+    <p>
+        This scatter plot shows the relationship between
+        study hours and previous marks.
+    </p>
+
+    <img
+        src="{{ url_for('static', filename='study_hours_vs_marks.png') }}"
+        alt="Study Hours vs Previous Marks"
+    >
+
+</div>
+
+    </div>
+
+</body>
+
+</html>
