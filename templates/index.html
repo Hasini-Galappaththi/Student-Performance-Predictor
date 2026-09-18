@@ -139,10 +139,10 @@
     </p>
 
     <div class="probability-bar">
-        <div
-            class="probability-fill"
-            style="width: {{ probability }}%;">
-        </div>
+       <div
+    class="probability-fill"
+    data-probability="{{ probability }}">
+</div>
     </div>
     <div class="input-summary">
 
@@ -286,6 +286,14 @@
 </div>
 
     </div>
+    <script>
+    const probabilityBar = document.querySelector(".probability-fill");
+
+    if (probabilityBar) {
+        const probability = probabilityBar.dataset.probability;
+        probabilityBar.style.width = `${probability}%`;
+    }
+</script>
 
 </body>
 
