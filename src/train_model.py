@@ -77,6 +77,6 @@ print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 
 # Save trained model
-joblib.dump(model, "student_performance_model.pkl")
+joblib.dump(model, "models/student_performance_model.pkl")
 
 print("\nModel saved successfully!")
