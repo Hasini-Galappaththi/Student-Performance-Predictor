@@ -1,5 +1,11 @@
 # Student Performance Predictor
 
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?logo=scikitlearn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Web%20App-black?logo=flask&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A beginner-friendly machine learning project that predicts whether a student is likely to **Pass or Fail** based on academic and lifestyle-related factors.
 
 ## Live Demo
