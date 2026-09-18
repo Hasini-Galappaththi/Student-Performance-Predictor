@@ -2,6 +2,12 @@
 
 A beginner-friendly machine learning project that predicts whether a student is likely to **pass or fail** based on academic and lifestyle-related factors.
 
+## Live Demo
+
+Try the deployed application here:
+
+[Student Performance Predictor - Live Demo](https://student-performance-predictor-78btjjhsnc7hhfsvm3qm6t.streamlit.app/)
+
 ## Project Overview
 
 The Student Performance Predictor uses a **Logistic Regression** machine learning model to perform binary classification.
