@@ -1,9 +1,9 @@
 # Student Performance Predictor
 
-![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?logo=scikitlearn&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-Web%20App-black?logo=flask&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python\&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?logo=scikitlearn\&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit\&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Web%20App-black?logo=flask\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 A beginner-friendly machine learning project that predicts whether a student is likely to **Pass or Fail** based on academic and lifestyle-related factors.
@@ -12,7 +12,7 @@ A beginner-friendly machine learning project that predicts whether a student is 
 
 Try the deployed Streamlit application:
 
-**[Student Performance Predictor – Live Demo](https://student-performance-predictor-78btjjhsnc7hhfsvm3qm6t.streamlit.app/)**
+[**Student Performance Predictor – Live Demo**](https://student-performance-predictor-78btjjhsnc7hhfsvm3qm6t.streamlit.app/)
 
 ---
 
@@ -38,7 +38,6 @@ The prediction target is:
 The trained machine learning model is integrated into a **Streamlit web application**, allowing users to enter student information and receive a predicted PASS/FAIL result together with the estimated probability of passing.
 
 A **Flask implementation** is also included to demonstrate the development of the model as a web-based application.
-
 
 ---
 
@@ -253,7 +252,7 @@ The project contains two web application implementations.
 
 ### Streamlit Application
 
-The Streamlit application is the current deployed version of the project.
+The Streamlit application is the **current deployed version** of the project.
 
 It provides:
 
@@ -316,7 +315,9 @@ Student-Performance-Predictor/
 │   └── index.html
 │
 ├── .gitignore
+├── LICENSE
 ├── README.md
+├── Procfile
 └── requirements.txt
 ```
 
@@ -478,6 +479,12 @@ Through this project, I practiced:
 
 Computer Science Undergraduate
 **BSc (Hons) in Computer Science**
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
