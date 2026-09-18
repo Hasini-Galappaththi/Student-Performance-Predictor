@@ -18,15 +18,17 @@ Try the deployed Streamlit application:
 
 ## Project Overview
 
-The **Student Performance Predictor** is a machine learning classification project developed using Python.
+## Project Overview
 
-The project uses a **Logistic Regression** model to predict student performance based on five input features:
+The **Student Performance Predictor** is a beginner-friendly machine learning classification project developed using **Python and Scikit-learn**.
 
-* Study Hours
-* Attendance
-* Previous Marks
-* Assignment Score
-* Sleep Hours
+The project uses a **Logistic Regression** model to predict whether a student is likely to **Pass or Fail** based on five input features:
+
+* **Study Hours**
+* **Attendance**
+* **Previous Marks**
+* **Assignment Score**
+* **Sleep Hours**
 
 The prediction target is:
 
@@ -35,9 +37,10 @@ The prediction target is:
 | `0`   | Fail    |
 | `1`   | Pass    |
 
-The trained model is integrated into a web application using **Streamlit**, allowing users to enter student information and receive a predicted PASS/FAIL result together with the probability of passing.
+The trained machine learning model is integrated into a **Streamlit web application**, allowing users to enter student information and receive a predicted PASS/FAIL result together with the estimated probability of passing.
 
-A Flask implementation is also included in the project as part of the application's development workflow.
+A **Flask implementation** is also included to demonstrate the development of the model as a web-based application.
+
 
 ---
 
