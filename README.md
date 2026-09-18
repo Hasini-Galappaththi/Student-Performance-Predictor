@@ -114,10 +114,26 @@ A bar chart showing the number of students classified as Pass and Fail.
 ### Study Hours vs Previous Marks
 
 A scatter plot showing the relationship between study hours and previous marks.
-
 ## Application Screenshots
 
-The project includes screenshots demonstrating the Flask web application, student performance predictions, model information, and data visualizations.
+The following screenshots demonstrate the Student Performance Predictor web application, prediction process, model information, and data visualizations.
+
+![Application Screenshot 1](screenshots/applicationSs1.png)
+
+![Application Screenshot 2](screenshots/applicationSs2.png)
+
+![Application Screenshot 3](screenshots/applicationSs3.png)
+
+![Application Screenshot 4](screenshots/applicationSs4.png)
+
+![Application Screenshot 5](screenshots/applicationSs5.png)
+
+![Application Screenshot 6](screenshots/applicationSs6.png)
+
+![Application Screenshot 7](screenshots/applicatinSs7.png)
+
+![Application Screenshot 8](screenshots/applicationSs8.png)
+
 
 ### Web Application
 
