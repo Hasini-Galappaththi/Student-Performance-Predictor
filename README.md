@@ -18,8 +18,6 @@ Try the deployed Streamlit application:
 
 ## Project Overview
 
-## Project Overview
-
 The **Student Performance Predictor** is a beginner-friendly machine learning classification project developed using **Python and Scikit-learn**.
 
 The project uses a **Logistic Regression** model to predict whether a student is likely to **Pass or Fail** based on five input features:
